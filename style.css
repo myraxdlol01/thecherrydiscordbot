@@ -1,0 +1,178 @@
+/* Base Reset and Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  background-color: #fff8fc;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.bot-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #ff7eb9;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+  color: #ff4f93;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.invite-button {
+  display: inline-block;
+  background-color: #ff4f93;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.invite-button:hover {
+  background-color: #e63b7d;
+}
+
+/* Navigation */
+nav {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #444;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-list a.active,
+.nav-list a:hover {
+  background-color: #ffe5f0;
+  color: #ff4f93;
+}
+
+/* Main Content */
+main {
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff4f93;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ff7eb9;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+code {
+  background-color: #fce4ef;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+/* Definition List (FAQ) */
+dl {
+  margin: 1.5rem 0;
+}
+
+dt {
+  font-weight: bold;
+  color: #ff4f93;
+  margin-top: 1rem;
+}
+
+dd {
+  margin-left: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Notice / Warning */
+.notice {
+  background-color: #fff0f5;
+  border-left: 4px solid #ff4f93;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  font-weight: 500;
+}
+
+/* PayPal button */
+.paypal-button {
+  display: inline-block;
+  background-color: #0070ba;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.paypal-button:hover {
+  background-color: #005c9c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
