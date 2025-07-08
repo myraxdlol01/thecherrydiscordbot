@@ -8,13 +8,13 @@
 html {
   font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
-  background-color: #fff8fc;
-  color: #333;
+  background-color: #ffffff;
+  color: #1a1a1a;
   scroll-behavior: smooth;
 }
 
 body {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -31,61 +31,77 @@ header {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 3px solid #ff7eb9;
+  border: 3px solid #000000;
+  transition: transform 0.3s ease;
+}
+
+.bot-avatar:hover {
+  transform: scale(1.05);
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0.25rem;
-  color: #ff4f93;
+  color: #000000;
+  letter-spacing: 1px;
 }
 
 header p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
+  color: #404040;
 }
 
 .invite-button {
   display: inline-block;
-  background-color: #ff4f93;
+  background-color: #000000;
   color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .invite-button:hover {
-  background-color: #e63b7d;
+  background-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* Navigation */
 nav {
   margin-bottom: 2rem;
   text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 .nav-list a {
   text-decoration: none;
-  color: #444;
+  color: #404040;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
-  transition: background 0.2s ease, color 0.2s ease;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .nav-list a.active,
 .nav-list a:hover {
-  background-color: #ffe5f0;
-  color: #ff4f93;
+  background-color: #f0f0f0;
+  color: #000000;
 }
 
 /* Main Content */
@@ -96,19 +112,21 @@ main {
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #ff4f93;
+  color: #000000;
+  letter-spacing: 1px;
 }
 
 h3 {
   font-size: 1.4rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: #ff7eb9;
+  color: #404040;
 }
 
 p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  color: #404040;
 }
 
 ul {
@@ -118,13 +136,15 @@ ul {
 
 ul li {
   margin-bottom: 0.5rem;
+  color: #404040;
 }
 
 code {
-  background-color: #fce4ef;
+  background-color: #f0f0f0;
   padding: 0.2rem 0.4rem;
-  border-radius: 5px;
-  font-family: monospace;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  color: #000000;
 }
 
 /* Definition List (FAQ) */
@@ -134,45 +154,347 @@ dl {
 
 dt {
   font-weight: bold;
-  color: #ff4f93;
+  color: #000000;
   margin-top: 1rem;
 }
 
 dd {
   margin-left: 1rem;
   margin-bottom: 0.75rem;
+  color: #404040;
 }
 
 /* Notice / Warning */
 .notice {
-  background-color: #fff0f5;
-  border-left: 4px solid #ff4f93;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
+  background-color: #f0f0f0;
+  border-left: 4px solid #000000;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
   margin: 1.5rem 0;
+  font-weight: 500;
+  color: #404040;
+}
+
+/* Dashboard Specific Styles */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 4px;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-top: 0.25rem;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #404040;
   font-weight: 500;
 }
 
-/* PayPal button */
-.paypal-button {
-  display: inline-block;
-  background-color: #0070ba;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s ease;
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
 }
 
-.paypal-button:hover {
-  background-color: #005c9c;
+.form-input:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+.form-button {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.form-button:hover {
+  background: #333333;
+  transform: translateY(-2px);
 }
 
 /* Footer */
 footer {
   text-align: center;
   margin-top: 3rem;
-  color: #aaa;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  color: #666666;
   font-size: 0.9rem;
+}
+
+/* Discord Login Styles */
+.discord-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem;
+}
+
+.discord-login-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.discord-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.discord-login-card h2 {
+    color: #23272a;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.discord-login-card p {
+    color: #6a7480;
+    margin-bottom: 2rem;
+}
+
+.discord-login-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #5865F2;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.discord-login-button:hover {
+    background-color: #4752C4;
+}
+
+.discord-login-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.8rem;
+    filter: brightness(0) invert(1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .discord-login-card {
+        background: #36393f;
+    }
+
+    .discord-login-card h2 {
+        color: #ffffff;
+    }
+
+    .discord-login-card p {
+        color: #b9bbbe;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .discord-login-card {
+        padding: 1.5rem;
+    }
+
+    .discord-login-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Login Footer Styles */
+.login-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.login-footer p {
+    font-size: 0.8rem;
+    color: #72767d;
+}
+
+.login-footer a {
+    color: #5865F2;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .login-footer {
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .login-footer p {
+        color: #b9bbbe;
+    }
+
+    .login-footer a {
+        color: #7289da;
+    }
+}
+
+/* Commands Page Styles */
+.command-category {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.command-category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #23272a;
+    border-bottom: 2px solid #5865F2;
+    padding-bottom: 0.5rem;
+}
+
+.command-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.command {
+    padding: 1rem;
+    background: #f6f6f7;
+    border-radius: 6px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.command:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.command h3 {
+    font-family: 'Consolas', monospace;
+    font-size: 1rem;
+    color: #5865F2;
+    margin-bottom: 0.5rem;
+}
+
+.command p {
+    font-size: 0.9rem;
+    color: #4f5660;
+    margin-bottom: 0.5rem;
+}
+
+.example {
+    font-size: 0.8rem;
+    color: #747f8d;
+    font-style: italic;
+    background: rgba(88, 101, 242, 0.1);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .command-category {
+        background: #2f3136;
+    }
+
+    .command-category h2 {
+        color: #ffffff;
+    }
+
+    .command {
+        background: #36393f;
+    }
+
+    .command h3 {
+        color: #7289da;
+    }
+
+    .command p {
+        color: #b9bbbe;
+    }
+
+    .example {
+        color: #a3a6aa;
+        background: rgba(114, 137, 218, 0.1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .command-list {
+        grid-template-columns: 1fr;
+    }
+
+    .command-category {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
 }

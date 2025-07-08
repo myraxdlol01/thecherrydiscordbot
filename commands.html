@@ -1,89 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>cherry • commands</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry Bot Commands</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/static/commands.html" class="active">Commands</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/static/premium.html">Premium</a>
+            <a href="/static/faq.html">FAQ</a>
+        </nav>
+    </header>
 
-  <header>
-    <img src="bot-avatar.jpg" alt="cherrybot avatar" class="bot-avatar" />
-    <h1>cherry</h1>
-    <p>discord utility bot with many great commands.</p>
-    <a class="invite-button" href="https://discord.com/oauth2/authorize?client_id=1391355916502433874&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer">invite cherry</a>
-  </header>
+    <main>
+        <h1>Cherry Bot Commands</h1>
+        
+        <section class="command-category">
+            <h2>Moderation</h2>
+            <div class="command-list">
+                <div class="command">
+                    <h3>/mod ban &lt;user&gt; [reason]</h3>
+                    <p>Ban a user from the server</p>
+                    <p class="example">Example: /mod ban @User Breaking rules</p>
+                </div>
+                <div class="command">
+                    <h3>/mod kick &lt;user&gt; [reason]</h3>
+                    <p>Kick a user from the server</p>
+                    <p class="example">Example: /mod kick @User Spamming</p>
+                </div>
+                <div class="command">
+                    <h3>/mod mute &lt;user&gt; &lt;duration&gt; [reason]</h3>
+                    <p>Temporarily mute a user</p>
+                    <p class="example">Example: /mod mute @User 1h Excessive caps</p>
+                </div>
+                <div class="command">
+                    <h3>/mod clear &lt;amount&gt; [user]</h3>
+                    <p>Clear messages in a channel</p>
+                    <p class="example">Example: /mod clear 50</p>
+                </div>
+                <div class="command">
+                    <h3>/mod slowmode &lt;seconds&gt;</h3>
+                    <p>Set channel slowmode</p>
+                    <p class="example">Example: /mod slowmode 10</p>
+                </div>
+            </div>
+        </section>
 
-  <nav>
-    <ul class="nav-list">
-      <li><a href="index.html">home</a></li>
-      <li><a href="commands.html" class="active">commands</a></li>
-      <li><a href="premium.html">premium</a></li>
-      <li><a href="faq.html">faq</a></li>
-    </ul>
-  </nav>
+        <section class="command-category">
+            <h2>Security</h2>
+            <div class="command-list">
+                <div class="command">
+                    <h3>/security antiraid &lt;on/off&gt;</h3>
+                    <p>Toggle anti-raid protection (default: 6 joins/10s)</p>
+                </div>
+                <div class="command">
+                    <h3>/security antinuke &lt;on/off&gt;</h3>
+                    <p>Toggle anti-nuke protection (default: 3 deletions/30s)</p>
+                </div>
+                <div class="command">
+                    <h3>/security threshold raid &lt;joins&gt; &lt;seconds&gt;</h3>
+                    <p>Set raid detection threshold</p>
+                </div>
+                <div class="command">
+                    <h3>/security threshold nuke &lt;actions&gt; &lt;seconds&gt;</h3>
+                    <p>Set nuke detection threshold</p>
+                </div>
+                <div class="command">
+                    <h3>/security logs &lt;channel&gt;</h3>
+                    <p>Set security log channel</p>
+                </div>
+            </div>
+        </section>
 
-  <main>
-    <h2>slash commands</h2>
-    <p>All commands are invoked with the <code>/</code> prefix inside Discord. Here’s the full list:</p>
+        <section class="command-category">
+            <h2>Music</h2>
+            <div class="command-list">
+                <div class="command">
+                    <h3>/music play &lt;song&gt;</h3>
+                    <p>Play a song or add to queue</p>
+                    <p class="example">Example: /music play Never Gonna Give You Up</p>
+                </div>
+                <div class="command">
+                    <h3>/music pause</h3>
+                    <p>Pause current song</p>
+                </div>
+                <div class="command">
+                    <h3>/music resume</h3>
+                    <p>Resume paused song</p>
+                </div>
+                <div class="command">
+                    <h3>/music skip</h3>
+                    <p>Skip current song</p>
+                </div>
+                <div class="command">
+                    <h3>/music queue</h3>
+                    <p>Show current queue</p>
+                </div>
+                <div class="command">
+                    <h3>/music volume &lt;0-200&gt;</h3>
+                    <p>Set music volume</p>
+                </div>
+                <div class="command">
+                    <h3>/music remove &lt;position&gt;</h3>
+                    <p>Remove song from queue</p>
+                </div>
+                <div class="command">
+                    <h3>/music clear</h3>
+                    <p>Clear the queue</p>
+                </div>
+            </div>
+        </section>
 
-    <section>
-      <h3>utility</h3>
-      <ul>
-        <li><code>/ping</code> – Show latency</li>
-        <li><code>/invite</code> – DM you the OAuth2 invite link</li>
-        <li><code>/servercount</code> – Number of servers the bot is in</li>
-        <li><code>/about</code> – About the bot</li>
-        <li><code>/help</code> – Paged help embed</li>
-      </ul>
-    </section>
+        <section class="command-category">
+            <h2>Utility</h2>
+            <div class="command-list">
+                <div class="command">
+                    <h3>/utility weather &lt;city&gt;</h3>
+                    <p>Get weather information</p>
+                </div>
+                <div class="command">
+                    <h3>/utility translate &lt;text&gt; &lt;language&gt;</h3>
+                    <p>Translate text to another language</p>
+                </div>
+                <div class="command">
+                    <h3>/utility calc &lt;expression&gt;</h3>
+                    <p>Calculate mathematical expression</p>
+                </div>
+                <div class="command">
+                    <h3>/utility reminder &lt;time&gt; &lt;message&gt;</h3>
+                    <p>Set a reminder</p>
+                </div>
+                <div class="command">
+                    <h3>/utility qr &lt;text&gt;</h3>
+                    <p>Generate QR code</p>
+                </div>
+                <div class="command">
+                    <h3>/utility shorten &lt;url&gt;</h3>
+                    <p>Shorten a URL</p>
+                </div>
+            </div>
+        </section>
 
-    <section>
-      <h3>fun</h3>
-      <ul>
-        <li><code>/coinflip</code> – Flip a coin</li>
-        <li><code>/avatar [user]</code> – Show someone’s avatar</li>
-        <li><code>/hug [user]</code> – Send a virtual hug</li>
-        <li><code>/8ball &lt;question&gt;</code> – Magic 8-ball answer</li>
-        <li><code>/weather &lt;city&gt;</code> – Current weather</li>
-        <li><code>/cat</code> – Random cat pic</li>
-        <li><code>/define &lt;word&gt;</code> – Dictionary definition</li>
-        <li><code>/remind &lt;minutes&gt; &lt;text&gt;</code> – DM reminder</li>
-        <li><code>/uptime</code> – How long the bot has been online</li>
-        <li><code>/poll "question" option1 | option2 …</code> – Reaction poll (owner-only)</li>
-      </ul>
-    </section>
+        <section class="command-category">
+            <h2>Games</h2>
+            <div class="command-list">
+                <div class="command">
+                    <h3>/games rps &lt;choice&gt;</h3>
+                    <p>Play Rock, Paper, Scissors</p>
+                </div>
+                <div class="command">
+                    <h3>/games coinflip</h3>
+                    <p>Flip a coin</p>
+                </div>
+                <div class="command">
+                    <h3>/games dice [sides]</h3>
+                    <p>Roll a dice (default: 6 sides)</p>
+                </div>
+                <div class="command">
+                    <h3>/games 8ball &lt;question&gt;</h3>
+                    <p>Ask the magic 8-ball</p>
+                </div>
+                <div class="command">
+                    <h3>/games random &lt;min&gt; &lt;max&gt;</h3>
+                    <p>Generate random number</p>
+                </div>
+                <div class="command">
+                    <h3>/games trivia</h3>
+                    <p>Play a trivia game</p>
+                </div>
+            </div>
+        </section>
 
-    <section>
-      <h3>timezones</h3>
-      <ul>
-        <li><code>/tz set &lt;alias&gt;</code> – Save your timezone</li>
-        <li><code>/tz change &lt;alias&gt;</code> – Change your timezone</li>
-        <li><code>/tz current</code> – Show your timezone</li>
-        <li><code>/tz supported</code> – List supported aliases</li>
-      </ul>
-    </section>
+        <section class="command-category">
+            <h2>Leveling</h2>
+            <div class="command-list">
+                <div class="command">
+                    <h3>/level rank [user]</h3>
+                    <p>Check your or another user's rank</p>
+                </div>
+                <div class="command">
+                    <h3>/level leaderboard</h3>
+                    <p>Show server leaderboard</p>
+                </div>
+                <div class="command">
+                    <h3>/level set &lt;user&gt; &lt;level&gt;</h3>
+                    <p>Set user's level (admin only)</p>
+                </div>
+                <div class="command">
+                    <h3>/level role add &lt;role&gt; &lt;level&gt;</h3>
+                    <p>Add level-up role reward</p>
+                </div>
+                <div class="command">
+                    <h3>/level role remove &lt;role&gt;</h3>
+                    <p>Remove level-up role</p>
+                </div>
+                <div class="command">
+                    <h3>/level multiplier &lt;role&gt; &lt;value&gt;</h3>
+                    <p>Set XP multiplier for role</p>
+                </div>
+            </div>
+        </section>
 
-    <section>
-      <h3>moderation</h3>
-      <ul>
-        <li><code>/kick &lt;user&gt; [reason]</code> – Kick a user</li>
-        <li><code>/ban &lt;user&gt; [reason]</code> – Ban a user</li>
-        <li><code>/timeout &lt;user&gt; &lt;minutes&gt; [reason]</code> – Timeout a user</li>
-        <li><code>/purge &lt;count&gt;</code> – Bulk delete messages</li>
-        <li><code>/slowmode &lt;seconds&gt;</code> – Set channel slowmode</li>
-        <li><code>/lock</code> – Lock channel</li>
-        <li><code>/unlock</code> – Unlock channel</li>
-        <li><code>/warn &lt;user&gt; &lt;reason&gt;</code> – Warn a user</li>
-        <li><code>/warnings &lt;user&gt;</code> – List warnings</li>
-      </ul>
-    </section>
-  </main>
+        <section class="command-category">
+            <h2>AI Chat</h2>
+            <div class="command-list">
+                <div class="command">
+                    <h3>/chat &lt;message&gt;</h3>
+                    <p>Chat with Cherry's AI</p>
+                    <p class="example">Example: /chat Tell me a story</p>
+                </div>
+                <div class="command">
+                    <h3>/chat clear</h3>
+                    <p>Clear chat history</p>
+                </div>
+                <div class="command">
+                    <h3>/chat style &lt;personality&gt;</h3>
+                    <p>Change AI chat style</p>
+                    <p class="example">Example: /chat style mysterious</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>made with care by chérie</p>
-  </footer>
-
+    <footer>
+        <p>&copy; 2024 Cherry Bot. All rights reserved.</p>
+    </footer>
 </body>
 </html>
