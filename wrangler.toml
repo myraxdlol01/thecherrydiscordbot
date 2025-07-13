@@ -1,9 +1,0 @@
-name = "my-bot-website"
-type = "static"
-
-account_id = "your-cloudflare-account-id"
-compatibility_date = "2025-07-07"
-
-[site]
-bucket = "./"         # path to your index.html
-entry-point = "."     # not strictly needed for static
