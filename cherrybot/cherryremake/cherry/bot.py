@@ -12,6 +12,8 @@ from discord import app_commands
 from dotenv import load_dotenv
 
 load_dotenv()
+print("STARTING BOT")
+
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 
@@ -200,3 +202,5 @@ if __name__ == "__main__":
     if not TOKEN:
         raise RuntimeError("DISCORD_TOKEN not set")
     bot.run(TOKEN)
+print(f"TOKEN is: {TOKEN!r}")
+print("BOT STARTED")
