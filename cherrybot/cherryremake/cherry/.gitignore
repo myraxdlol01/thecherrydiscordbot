@@ -1,0 +1,79 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# VSCode, PyCharm, Sublime, etc.
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS & system files
+.DS_Store
+Thumbs.db
+
+# Python distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Log files
+*.log
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Coverage reports
+.coverage
+.tox/
+.nox/
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Test outputs
+htmlcov/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# GitHub Actions/Workflows
+.github/
+
+# Optional: Ignore your local database
+*.sqlite3
+
+# Optional: Ignore node_modules if you use Node in your project
+node_modules/
